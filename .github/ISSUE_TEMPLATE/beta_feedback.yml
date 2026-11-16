@@ -1,0 +1,46 @@
+name: Beta tester feedback
+description: Report a bug, suggest an improvement, or share other feedback.
+title: "[Feedback]: "
+labels: [needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is public. Do not include passwords, access tokens, or private information.
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Bug
+        - Feature request
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Describe your feedback
+      description: What happened, or what would you like to see?
+      placeholder: A clear, concise description.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Steps or additional context
+      description: For bugs, include steps to reproduce. For suggestions, explain the use case.
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: App version or environment (optional)
+    validations:
+      required: false
